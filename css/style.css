@@ -1,46 +1,42 @@
-/*CSS Reset by https://piccalil.li/blog/a-modern-css-reset/*/
+/*------- CSS Reset by https://piccalil.li/blog/a-modern-css-reset/ -------*/
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Remove default margin */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+    list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.3;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -48,21 +44,235 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* General section*/
+
+body {
+    color: hsl(219, 26%, 17%);
+    font-family: Georgia, Times, serif;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+body>* {
+    width: 100%;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    font-size: 15px;
+    text-decoration: none;
+    color: hsl(220, 13%, 91%);
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+    color: hsl(220, 13%, 60%);
+}
+
+.button {
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    border: 2px solid hsl(223, 90%, 61%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* header section */
+
+.header,
+.hero,
+.footer {
+    background-color: hsl(219, 26%, 17%);
+    color: hsl(220, 13%, 91%);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.header p {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.header ul li {
+    display: inline;
+    padding-inline: 5px;
+}
+
+/* hero section */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.hero>* {
+    width: 450px;
+}
+
+.hero .text h1 {
+    font-size: 48px;
+}
+
+.hero .text p {
+    font-size: 18px;
+}
+
+.hero .button {
+    color: hsl(220, 13%, 91%);
+    background-color: hsl(223, 90%, 61%);
+    border-color: hsl(223, 90%, 61%);
+    margin-top: 10px;
+}
+
+.hero .button:hover,
+.hero .button:focus-visible {
+    background-color: hsla(220, 13%, 91%, 0);
+}
+
+/* content section*/
+
+.content {
+    text-align: center;
+    flex: 1;
+}
+
+.content>* {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 36px;
+    font-style: bold;
+    margin-bottom: 50px;
+}
+
+.content .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cards .card {
+    width: 150px;
+}
+
+.card .text {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.card .img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid hsl(223, 90%, 61%);
+    border-radius: 15px;
+}
+
+/* Quote section */
+
+.quote {
+    background-color: hsl(220, 13%, 91%);
+    padding-block: 100px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.quote>* {
+    margin: 0 auto;
+    font-style: italic;
+    max-width: 950px;
+}
+
+.quote h1 {
+    font-size: 36px;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.quote p {
+    text-align: right;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Newspaper section */
+
+.newspaper {
+    flex: 1;
+}
+
+.signup {
+    display: flex;
+    justify-content: space-around;
+    max-width: 950px;
+    background-color: hsl(223, 90%, 61%);
+    color: hsl(220, 13%, 91%);
+    padding: 50px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.signup h1 {
+    font-size: 18px;
+}
+
+.signup p {
+    font-size: 15px;
+}
+
+.signup .button {
+    flex-shrink: 0;
+    color: hsl(220, 13%, 91%);
+    background-color: hsl(223, 90%, 61%);
+    border-color: hsl(220, 13%, 91%);
+}
+
+.signup .button:hover,
+.signup .button:focus-visible {
+    background-color: hsl(220, 13%, 91%);
+    color: hsl(223, 90%, 61%);
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
 }
