@@ -1,5 +1,9 @@
 # Landing Page
 
+## About
 A landing page created with html/css.
 
-This was made as a part of The Odin Project curriculum, if you want to know more about TOP, visit https://www.theodinproject.com/about.
+## Links
+[View on GitHub Pages](https://johnrds.github.io/landing-page/)
+
+This was made as a part of The Odin Project curriculum, [Click here](https://www.theodinproject.com/about) to know more about TOP.
